@@ -12,19 +12,15 @@
             box-sizing: border-box;
         }
 
-        body {
+        /* Body and HTML settings */
+        html, body {
+            height: 100%; /* Ensure the page takes full height */
+            overflow: auto; /* Allow scrolling of the page */
             font-family: 'Courier New', Courier, monospace;
             background: url('https://graph.org/file/40e8ced1c225de2eae657-0b11730d0c61b54885.jpg') no-repeat center center fixed;
-            background-size: cover;
+            background-size: cover; /* Ensures the background image covers the entire screen */
             color: #00f7ff; /* Neon blue text color */
             text-align: center;
-            overflow-x: hidden; /* Prevent horizontal scroll */
-            background-attachment: fixed;
-            min-height: 100vh; /* Ensure body takes full height */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
         }
 
         /* Title styling */
@@ -51,7 +47,8 @@
             margin: 20px 0;
             border-radius: 5px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); /* Dark shadow effect */
-            overflow: auto; /* Allow scrolling if content exceeds */
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .about-content p {
@@ -81,19 +78,9 @@
             color: #1e1e1e;
         }
 
-        /* Increased margin-bottom for extra space */
+        /* Increase margin-bottom for extra space */
         .go-back-btn {
             margin-bottom: 60px; /* Increased margin for more space */
-        }
-
-        /* Full page scroll */
-        html, body {
-            height: 100%; /* Ensure the body and html take up full height */
-            overflow: hidden; /* Remove any extra scrollbars */
-        }
-
-        body {
-            overflow-y: scroll; /* Allow vertical scrolling for entire body */
         }
 
         /* Responsive Design for Android */
@@ -113,27 +100,45 @@
                 padding: 8px 16px;
             }
         }
+
+        /* Full page scroll with background fixed */
+        body {
+            background-attachment: fixed; /* Ensure background stays fixed */
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Ensure scroll of entire page content */
+        .content-wrapper {
+            height: auto;
+            min-height: 100%;
+            width: 100%;
+            overflow: visible; /* Allow the content to scroll */
+        }
     </style>
 </head>
 <body>
 
-    <h1>About The Mystery</h1>
+    <div class="content-wrapper">
+        <h1>About The Mystery</h1>
 
-    <div class="about-content">
-        <p class="first-paragraph">Welcome to the world of AARAV. Here, we explore the unknown, the unseen, and the mysterious. Every puzzle, every clue, and every case we take on brings us closer to unveiling the secrets hidden in plain sight. If you're curious about life's greatest mysteries, you're in the right place.</p>
+        <div class="about-content">
+            <p class="first-paragraph">Welcome to the world of AARAV. Here, we explore the unknown, the unseen, and the mysterious. Every puzzle, every clue, and every case we take on brings us closer to unveiling the secrets hidden in plain sight. If you're curious about life's greatest mysteries, you're in the right place.</p>
 
-        <p class="second-paragraph">Our mission is not only to solve riddles but also to ignite the spark of curiosity within each person who seeks the truth. From cryptic messages to hidden symbols, we delve deep into the fabric of reality to uncover what lies beneath the surface.</p>
+            <p class="second-paragraph">Our mission is not only to solve riddles but also to ignite the spark of curiosity within each person who seeks the truth. From cryptic messages to hidden symbols, we delve deep into the fabric of reality to uncover what lies beneath the surface.</p>
 
-        <p>We are a community of passionate individuals, dedicated to sharing knowledge and experiences. Our members contribute their findings and theories, working together to piece together the mysteries that surround us. With each discovery, we grow stronger, and the mysteries become clearer.</p>
+            <p>We are a community of passionate individuals, dedicated to sharing knowledge and experiences. Our members contribute their findings and theories, working together to piece together the mysteries that surround us. With each discovery, we grow stronger, and the mysteries become clearer.</p>
 
-        <p>Whether you are an experienced detective or a newcomer eager to uncover secrets, AARAV is the place where your mind can roam free. Step into the shadows, embrace the thrill of discovery, and join us in solving the mysteries that beckon from the unknown.</p>
+            <p>Whether you are an experienced detective or a newcomer eager to uncover secrets, AARAV is the place where your mind can roam free. Step into the shadows, embrace the thrill of discovery, and join us in solving the mysteries that beckon from the unknown.</p>
 
-        <p>Join our Telegram group to be part of the conversation. Engage with like-minded individuals, share your thoughts, and help us build a community that will leave no mystery unsolved.</p>
+            <p>Join our Telegram group to be part of the conversation. Engage with like-minded individuals, share your thoughts, and help us build a community that will leave no mystery unsolved.</p>
 
-        <p>Thank you for joining us on this journey. Together, we will explore the mysteries of the world, piece by piece.</p>
+            <p>Thank you for joining us on this journey. Together, we will explore the mysteries of the world, piece by piece.</p>
+        </div>
+
+        <a href="index.html" class="go-back-btn">Go Back to Home</a>
     </div>
 
-    <a href="index.html" class="go-back-btn">Go Back to Home</a>
-
 </body>
-</html>
+    </html>
