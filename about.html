@@ -16,7 +16,7 @@
             font-family: 'Courier New', Courier, monospace;
             background: url('https://graph.org/file/40e8ced1c225de2eae657-0b11730d0c61b54885.jpg') no-repeat center center fixed;
             background-size: cover;
-            height: 100vh;
+            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -25,6 +25,7 @@
             text-align: center;
             overflow: hidden;
             background-attachment: fixed;
+            min-height: 100vh; /* Ensure body takes full height */
         }
 
         /* Overlay for dark effect */
@@ -92,9 +93,17 @@
             color: #1e1e1e;
         }
 
-        /* Add extra space below Go Back Button */
+        /* Increase margin-bottom for extra space */
         .go-back-btn {
-            margin-bottom: 40px; /* Increased margin for more space */
+            margin-bottom: 60px; /* Increased margin for more space */
+        }
+
+        /* Make the entire page scrollable */
+        .about-page {
+            width: 100%;
+            height: 100%;
+            overflow-y: auto; /* Enable scrolling for the whole page */
+            padding-bottom: 100px; /* Additional padding for bottom space */
         }
 
         /* Responsive Design for Android */
@@ -118,23 +127,25 @@
 </head>
 <body>
 
-    <h1>About The Mystery</h1>
+    <div class="about-page">
+        <h1>About The Mystery</h1>
 
-    <div class="about-content">
-        <p>Welcome to the world of AARAV. Here, we explore the unknown, the unseen, and the mysterious. Every puzzle, every clue, and every case we take on brings us closer to unveiling the secrets hidden in plain sight. If you're curious about life's greatest mysteries, you're in the right place.</p>
+        <div class="about-content">
+            <p>Welcome to the world of AARAV. Here, we explore the unknown, the unseen, and the mysterious. Every puzzle, every clue, and every case we take on brings us closer to unveiling the secrets hidden in plain sight. If you're curious about life's greatest mysteries, you're in the right place.</p>
 
-        <p>Our mission is not only to solve riddles but also to ignite the spark of curiosity within each person who seeks the truth. From cryptic messages to hidden symbols, we delve deep into the fabric of reality to uncover what lies beneath the surface.</p>
+            <p>Our mission is not only to solve riddles but also to ignite the spark of curiosity within each person who seeks the truth. From cryptic messages to hidden symbols, we delve deep into the fabric of reality to uncover what lies beneath the surface.</p>
 
-        <p>We are a community of passionate individuals, dedicated to sharing knowledge and experiences. Our members contribute their findings and theories, working together to piece together the mysteries that surround us. With each discovery, we grow stronger, and the mysteries become clearer.</p>
+            <p>We are a community of passionate individuals, dedicated to sharing knowledge and experiences. Our members contribute their findings and theories, working together to piece together the mysteries that surround us. With each discovery, we grow stronger, and the mysteries become clearer.</p>
 
-        <p>Whether you are an experienced detective or a newcomer eager to uncover secrets, AARAV is the place where your mind can roam free. Step into the shadows, embrace the thrill of discovery, and join us in solving the mysteries that beckon from the unknown.</p>
+            <p>Whether you are an experienced detective or a newcomer eager to uncover secrets, AARAV is the place where your mind can roam free. Step into the shadows, embrace the thrill of discovery, and join us in solving the mysteries that beckon from the unknown.</p>
 
-        <p>Join our Telegram group to be part of the conversation. Engage with like-minded individuals, share your thoughts, and help us build a community that will leave no mystery unsolved.</p>
+            <p>Join our Telegram group to be part of the conversation. Engage with like-minded individuals, share your thoughts, and help us build a community that will leave no mystery unsolved.</p>
 
-        <p>Thank you for joining us on this journey. Together, we will explore the mysteries of the world, piece by piece.</p>
+            <p>Thank you for joining us on this journey. Together, we will explore the mysteries of the world, piece by piece.</p>
+        </div>
+
+        <a href="index.html" class="go-back-btn">Go Back to Home</a>
     </div>
 
-    <a href="index.html" class="go-back-btn">Go Back to Home</a>
-
 </body>
-    </html>
+        </html>
