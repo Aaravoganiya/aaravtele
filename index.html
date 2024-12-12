@@ -78,7 +78,7 @@
             box-shadow: 0 0 15px #00f7ff, 0 0 30px #00b0ff;
         }
 
-        /* Cross (X) Menu Button */
+        /* X-shaped Menu Button */
         .menu-btn {
             position: absolute;
             top: 20px;
@@ -87,13 +87,15 @@
             height: 40px;
             cursor: pointer;
             z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .menu-btn div {
-            width: 40px;
+            width: 35px;
             height: 5px;
             background-color: #00f7ff;
-            border-radius: 5px;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -103,7 +105,7 @@
         .menu-btn div::before,
         .menu-btn div::after {
             content: '';
-            width: 40px;
+            width: 35px;
             height: 5px;
             background-color: #00f7ff;
             position: absolute;
@@ -132,6 +134,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            transition: 0.3s;
         }
 
         .menu-panel a {
@@ -203,14 +206,13 @@
     </style>
 </head>
 <body>
-    <!-- Menu Button -->
+    <!-- Menu Button (X Icon) -->
     <div class="menu-btn" onclick="toggleMenu()">
         <div></div>
     </div>
     
     <!-- Menu Panel -->
     <div class="menu-panel" id="menu-panel">
-        <a href="https://t.me/YourChannelName" target="_blank" class="btn" onclick="closeMenu()">Join Us on Telegram</a>
         <a href="about.html" class="btn" onclick="closeMenu()">About The Mystery</a>
     </div>
 
@@ -237,7 +239,7 @@
             }
         }
 
-        // Close the menu
+        // Close the menu when clicking a link
         function closeMenu() {
             const menuPanel = document.getElementById('menu-panel');
             menuPanel.style.right = '-200px';
