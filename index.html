@@ -78,6 +78,88 @@
             box-shadow: 0 0 15px #00f7ff, 0 0 30px #00b0ff;
         }
 
+        /* Vampire Bat Menu Button */
+        .menu-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        .menu-btn::before, .menu-btn::after {
+            content: '';
+            position: absolute;
+            width: 35px;
+            height: 5px;
+            background-color: #00f7ff;
+            border-radius: 5px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .menu-btn::before {
+            transform: rotate(-45deg) translate(-50%, -50%);
+        }
+
+        .menu-btn::after {
+            transform: rotate(45deg) translate(-50%, -50%);
+        }
+
+        /* Menu Panel */
+        .menu-panel {
+            position: absolute;
+            top: 0;
+            right: -200px;
+            background: rgba(0, 0, 0, 0.9);
+            height: 100%;
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .menu-panel a {
+            padding: 15px;
+            color: #00f7ff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 10px 0;
+            text-align: center;
+            transition: 0.3s;
+            border-bottom: 1px solid #00f7ff;
+        }
+
+        .menu-panel a:hover {
+            background: #00f7ff;
+            color: #1e1e1e;
+        }
+
+        /* About Section */
+        .about-section {
+            display: none;
+            padding: 20px;
+            color: #fff;
+            font-size: 1.1rem;
+            text-align: left;
+            background: rgba(0, 0, 0, 0.8);
+            margin: 20px 0;
+            border-radius: 5px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Show the About Section when activated */
+        .about-section.active {
+            display: block;
+        }
+
         /* Responsive Design for Android */
         @media screen and (max-width: 768px) {
             h1 {
@@ -92,13 +174,63 @@
                 padding: 10px 20px;
                 font-size: 1rem;
             }
+
+            .menu-btn::before, .menu-btn::after {
+                width: 30px;
+            }
+
+            .menu-panel {
+                width: 100%;
+                right: 0;
+            }
+
+            .about-section {
+                font-size: 1rem;
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="menu-btn" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+    <div class="menu-panel" id="menu-panel">
+        <a href="https://t.me/NoMoreEmotions" target="_blank" class="btn">Join Us on Telegram</a>
+        <a href="#" onclick="toggleAboutSection()" class="btn">About The Mystery</a>
+    </div>
+
     <h1>AARAV</h1>
     <p>Step into the shadows. Join our Telegram channel for mysteries and insights.</p>
     <a href="https://t.me/NoMoreEmotions" target="_blank" class="btn">Join Us on Telegram</a>
     <a href="https://t.me/GODxAYANOKOUJI" target="_blank" class="btn">Contact The Mystery</a>
+
+    <!-- About The Mystery Section -->
+    <div id="about-section" class="about-section">
+        <h2>About The Mystery</h2>
+        <p>Welcome to AARAV, a space dedicated to uncovering hidden truths and solving the unknown. Join our Telegram community to dive deep into exciting mysteries, and connect with other curious minds. Let's embark on this journey together!</p>
+        <p>My name is [Your Name], and I'm passionate about uncovering the unexplained. Whether it's solving puzzles, discussing the supernatural, or exploring philosophical mysteries, this is the place to be.</p>
+    </div>
+
+    <script>
+        // Toggle the menu panel
+        function toggleMenu() {
+            const menuPanel = document.getElementById('menu-panel');
+            if (menuPanel.style.right === '0px') {
+                menuPanel.style.right = '-200px';
+            } else {
+                menuPanel.style.right = '0';
+            }
+        }
+
+        // Toggle the About Section visibility
+        function toggleAboutSection() {
+            const aboutSection = document.getElementById('about-section');
+            aboutSection.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
