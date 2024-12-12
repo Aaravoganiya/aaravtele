@@ -28,7 +28,7 @@
             min-height: 100vh; /* Ensure body takes full height */
         }
 
-        /* Remove overlay to make entire page transparent */
+        /* Dark overlay to darken the entire background */
         body::before {
             content: '';
             position: absolute;
@@ -36,7 +36,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.4); /* Slight dark overlay for visibility */
+            background: rgba(0, 0, 0, 0.6); /* Dark overlay */
             z-index: -1;
         }
 
@@ -66,13 +66,13 @@
             color: #fff;
             font-size: 1rem;
             text-align: left;
-            background: transparent; /* Make content area transparent */
+            background: rgba(0, 0, 0, 0.8); /* Dark background with opacity */
             margin: 20px 0;
             border-radius: 5px;
             max-height: auto;
             margin-left: auto;
             margin-right: auto;
-            box-shadow: none; /* Removed shadow effect */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); /* Dark shadow effect */
         }
 
         .about-content p {
@@ -131,9 +131,9 @@
     <h1>About The Mystery</h1>
 
     <div class="about-content">
-        <p> class="first-ppragraph">Welcome to the world of AARAV. Here, we explore the unknown, the unseen, and the mysterious. Every puzzle, every clue, and every case we take on brings us closer to unveiling the secrets hidden in plain sight. If you're curious about life's greatest mysteries, you're in the right place.</p>
+        <p class="first-paragraph">Welcome to the world of AARAV. Here, we explore the unknown, the unseen, and the mysterious. Every puzzle, every clue, and every case we take on brings us closer to unveiling the secrets hidden in plain sight. If you're curious about life's greatest mysteries, you're in the right place.</p>
 
-        <p> class="second-paragraph">Our mission is not only to solve riddles but also to ignite the spark of curiosity within each person who seeks the truth. From cryptic messages to hidden symbols, we delve deep into the fabric of reality to uncover what lies beneath the surface.</p>
+        <p class="second-paragraph">Our mission is not only to solve riddles but also to ignite the spark of curiosity within each person who seeks the truth. From cryptic messages to hidden symbols, we delve deep into the fabric of reality to uncover what lies beneath the surface.</p>
 
         <p>We are a community of passionate individuals, dedicated to sharing knowledge and experiences. Our members contribute their findings and theories, working together to piece together the mysteries that surround us. With each discovery, we grow stronger, and the mysteries become clearer.</p>
 
