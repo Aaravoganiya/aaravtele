@@ -15,12 +15,15 @@
         /* Body and HTML settings */
         html, body {
             height: 100%; /* Ensure the page takes full height */
-            overflow: auto; /* Allow scrolling of the page */
+            overflow-x: hidden; /* Prevent horizontal scroll */
             font-family: 'Courier New', Courier, monospace;
             background: url('https://graph.org/file/40e8ced1c225de2eae657-0b11730d0c61b54885.jpg') no-repeat center center fixed;
             background-size: cover; /* Ensures the background image covers the entire screen */
             color: #00f7ff; /* Neon blue text color */
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
         }
 
         /* Title styling */
@@ -39,31 +42,32 @@
         .about-content {
             width: 90%;
             max-width: 800px;
-            padding: 20px;
+            padding: 25px;
             color: #fff;
-            font-size: 1rem;
+            font-size: 1.1rem;
             text-align: left;
             background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
-            margin: 20px 0;
-            border-radius: 5px;
+            margin: 30px 0;
+            border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); /* Dark shadow effect */
             margin-left: auto;
             margin-right: auto;
+            overflow: auto; /* Ensure content is scrollable if needed */
         }
 
         .about-content p {
-            margin-bottom: 15px; /* Space between paragraphs */
+            margin-bottom: 20px; /* More space between paragraphs */
             line-height: 1.6;
         }
 
         /* Go Back Button */
         .go-back-btn {
-            margin-top: 20px;
-            padding: 10px 20px;
+            margin-top: 30px;
+            padding: 15px 30px;
             color: #00f7ff;
             background: transparent;
             border: 2px solid #00f7ff;
-            font-size: 1.1rem;
+            font-size: 1.5rem; /* Increased size for better visibility */
             border-radius: 5px;
             text-decoration: none;
             text-transform: uppercase;
@@ -78,7 +82,7 @@
             color: #1e1e1e;
         }
 
-        /* Increase margin-bottom for extra space */
+        /* Increased margin-bottom for extra space */
         .go-back-btn {
             margin-bottom: 60px; /* Increased margin for more space */
         }
@@ -96,8 +100,8 @@
             }
 
             .go-back-btn {
-                font-size: 1rem;
-                padding: 8px 16px;
+                font-size: 1.3rem;
+                padding: 12px 24px;
             }
         }
 
