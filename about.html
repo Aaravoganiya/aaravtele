@@ -19,12 +19,12 @@
             height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             color: #00f7ff; /* Neon blue text color */
             text-align: center;
             overflow: hidden;
-            background-attachment: fixed; /* Fixed background */
+            background-attachment: fixed;
         }
 
         /* Overlay for dark effect */
@@ -40,86 +40,79 @@
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-family: 'Cinzel', serif; /* Sheriff-style font */
             color: #00f7ff; /* Neon blue text */
             text-shadow: 0 0 10px #00f7ff, 0 0 20px #00b0ff, 0 0 30px #0099cc;
+            margin-top: 20px;
             margin-bottom: 20px;
         }
 
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            color: #00f7ff;
-            text-shadow: 0 0 10px #00f7ff, 0 0 20px #00b0ff;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
-            color: #00f7ff;
-            border: 2px solid #00f7ff;
-            border-radius: 5px;
-            background: transparent;
-            text-decoration: none;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            cursor: pointer;
-            transition: 0.3s;
-            text-shadow: 0 0 10px #00f7ff, 0 0 20px #00b0ff;
-            margin-bottom: 15px;
-        }
-
-        .btn:hover {
-            background: #00f7ff;
-            color: #1e1e1e;
-            box-shadow: 0 0 15px #00f7ff, 0 0 30px #00b0ff;
-        }
-
-        /* About Content */
         .about-content {
-            padding: 20px;
+            width: 90%;
+            padding: 15px;
             color: #fff;
-            font-size: 1.1rem;
+            font-size: 1rem;
             text-align: left;
             background: rgba(0, 0, 0, 0.8);
             margin: 20px 0;
             border-radius: 5px;
             max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
-        /* Go Back Button */
         .go-back-btn {
             margin-top: 20px;
             padding: 10px 20px;
+            color: #00f7ff;
             background: transparent;
             border: 2px solid #00f7ff;
-            color: #00f7ff;
-            cursor: pointer;
+            font-size: 1.1rem;
+            border-radius: 5px;
             text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            cursor: pointer;
             text-align: center;
-            font-size: 1rem;
+            transition: 0.3s;
         }
 
         .go-back-btn:hover {
             background: #00f7ff;
             color: #1e1e1e;
         }
+
+        /* Responsive Design for Android */
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                font-size: 1rem;
+                padding: 10px;
+                margin: 10px;
+            }
+
+            .go-back-btn {
+                font-size: 1rem;
+                padding: 8px 16px;
+            }
+        }
     </style>
 </head>
 <body>
+
     <h1>About The Mystery</h1>
-    
+
     <div class="about-content">
-        <h2>Welcome to AARAV</h2>
-        <p>Step into the shadows with AARAV, a space dedicated to uncovering hidden truths and solving the unknown. Join our Telegram community to dive deep into exciting mysteries, and connect with other curious minds. Let's embark on this journey together!</p>
-        <p>My name is [Your Name], and I'm passionate about uncovering the unexplained. Whether it's solving puzzles, discussing the supernatural, or exploring philosophical mysteries, this is the place to be. Together, we’ll discover the mysteries that the world has yet to uncover.</p>
+        <p>Welcome to the world of AARAV. Here, we explore the unknown, the unseen, and the mysterious. Every puzzle, every clue, and every case we take on brings us closer to unveiling the secrets hidden in plain sight.</p>
+
+        <p>Our mission is to gather insights, unravel complex mysteries, and provide you with the tools you need to think like a true detective. Whether you're solving riddles or exploring cryptic tales, you’re in the right place.</p>
+
+        <p>Join our Telegram group and become part of our mystery-solving community. Step into the shadows and embrace the thrill of discovery!</p>
     </div>
 
-    <!-- Go back button -->
     <a href="index.html" class="go-back-btn">Go Back to Home</a>
+
 </body>
-  </html>
+</html>
