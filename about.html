@@ -23,7 +23,6 @@
             align-items: center;
             color: #00f7ff; /* Neon blue text color */
             text-align: center;
-            overflow-y: auto; /* Full page scroll */
             overflow-x: hidden; /* Prevent horizontal scroll */
             background-attachment: fixed;
             min-height: 100vh; /* Ensure body takes full height */
@@ -41,12 +40,6 @@
             box-shadow: none; /* Removed shadow effect */
         }
 
-        /* First two paragraphs styling */
-        .first-paragraph, .second-paragraph {
-            background: transparent; /* Transparent background */
-            box-shadow: none; /* Removed shadow effect */
-        }
-
         /* About Content Styling */
         .about-content {
             width: 90%;
@@ -58,10 +51,8 @@
             background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
             margin: 20px 0;
             border-radius: 5px;
-            max-height: auto;
-            margin-left: auto;
-            margin-right: auto;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); /* Dark shadow effect */
+            overflow: auto; /* Allow scrolling if content exceeds */
         }
 
         .about-content p {
@@ -94,6 +85,12 @@
         /* Increase margin-bottom for extra space */
         .go-back-btn {
             margin-bottom: 60px; /* Increased margin for more space */
+        }
+
+        /* Prevent content overflow */
+        html, body {
+            height: 100%;
+            overflow: hidden; /* Prevent body overflow */
         }
 
         /* Responsive Design for Android */
@@ -136,4 +133,4 @@
     <a href="index.html" class="go-back-btn">Go Back to Home</a>
 
 </body>
-    </html>
+        </html>
