@@ -212,7 +212,7 @@
     
     <!-- Menu Panel -->
     <div class="menu-panel" id="menu-panel">
-        <a href="about.html" class="btn" onclick="closeMenu()">About The Mystery</a>
+        <a href="javascript:void(0);" class="btn" onclick="toggleAboutSection()">About The Mystery</a>
     </div>
 
     <h1>AARAV</h1>
@@ -248,11 +248,14 @@
             }
         }
 
-        // Close the menu when clicking a link
-        function closeMenu() {
-            const menuPanel = document.getElementById('menu-panel');
-            menuPanel.style.display = 'none';
-            menuOpen = false; // Set the menu as closed
+        // Toggle the About Section visibility
+        function toggleAboutSection() {
+            const aboutSection = document.getElementById('about-section');
+            if (aboutSection.style.display === 'block') {
+                aboutSection.style.display = 'none';
+            } else {
+                aboutSection.style.display = 'block';
+            }
         }
     </script>
 </body>
