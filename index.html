@@ -5,33 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AARAV</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f9;
-            color: #333;
+        /* General Reset */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        .container {
-            padding: 20px;
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #1e1e2f;
+            color: #e0e0e0;
+            text-align: center;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         h1 {
-            color: #0078d4;
+            font-size: 3rem;
+            color: #ff6347;
+            text-shadow: 0 0 10px #ff4500, 0 0 20px #ff4500;
         }
+        p {
+            margin: 20px 0;
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+
+        /* Moving Button */
         .btn {
             display: inline-block;
-            margin: 20px;
             padding: 15px 30px;
-            background-color: #0088cc;
+            background-color: #222;
             color: #fff;
+            border: 2px solid #ff6347;
             text-decoration: none;
             border-radius: 5px;
+            position: relative;
+            animation: float 4s infinite ease-in-out;
             cursor: pointer;
+            text-shadow: 0 0 5px #ff6347, 0 0 10px #ff6347;
         }
         .btn:hover {
-            background-color: #005f8c;
+            background-color: #ff6347;
+            color: #1e1e2f;
+            box-shadow: 0 0 10px #ff4500, 0 0 20px #ff4500;
         }
+
+        /* Button Animation */
+        @keyframes float {
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+            25% {
+                transform: translateY(-10px) translateX(10px);
+            }
+            50% {
+                transform: translateY(0) translateX(20px);
+            }
+            75% {
+                transform: translateY(10px) translateX(10px);
+            }
+            100% {
+                transform: translateY(0) translateX(0);
+            }
+        }
+
         /* Pop-up Modal Styles */
         .popup-overlay {
             display: none;
@@ -40,7 +81,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.8);
             z-index: 1000;
         }
         .popup {
@@ -48,37 +89,38 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background: #fff;
+            background: #222;
             padding: 20px;
             width: 300px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             text-align: center;
             border-radius: 8px;
+            color: #e0e0e0;
         }
         .popup h2 {
-            margin: 0 0 15px;
-            color: #0078d4;
+            margin-bottom: 15px;
+            color: #ff6347;
         }
         .popup p {
-            margin: 0 0 20px;
+            margin-bottom: 20px;
         }
         .close-btn {
-            background: #e74c3c;
-            color: #fff;
+            background: #ff6347;
+            color: #1e1e2f;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
         .close-btn:hover {
-            background: #c0392b;
+            background: #ff4500;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to AARAV</h1>
-        <p>Join our Telegram channel to stay updated with the latest news, tips, and exclusive content.</p>
+        <h1>AARAV</h1>
+        <p>Step into the mystery. Join our Telegram channel for exclusive insights and updates.</p>
         <!-- Button to Trigger Pop-up -->
         <button class="btn" onclick="showPopup()">Join Us on Telegram</button>
     </div>
@@ -86,8 +128,8 @@
     <!-- Pop-up Modal -->
     <div class="popup-overlay" id="popup">
         <div class="popup">
-            <h2>Don't Miss Out!</h2>
-            <p>Click the button below to join our Telegram channel now.</p>
+            <h2>Ready to Join?</h2>
+            <p>Click below to explore more on our Telegram channel.</p>
             <a href="https://t.me/YourChannelName" target="_blank" class="btn">Join Telegram</a>
             <br><br>
             <button class="close-btn" onclick="closePopup()">Close</button>
@@ -106,4 +148,4 @@
         }
     </script>
 </body>
-    </html>
+                </html>
