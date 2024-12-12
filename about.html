@@ -52,9 +52,6 @@
             border-radius: 5px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); /* Dark shadow effect */
             overflow: auto; /* Allow scrolling if content exceeds */
-            max-height: none;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .about-content p {
@@ -84,9 +81,19 @@
             color: #1e1e1e;
         }
 
-        /* Increase margin-bottom for extra space */
+        /* Increased margin-bottom for extra space */
         .go-back-btn {
             margin-bottom: 60px; /* Increased margin for more space */
+        }
+
+        /* Full page scroll */
+        html, body {
+            height: 100%; /* Ensure the body and html take up full height */
+            overflow: hidden; /* Remove any extra scrollbars */
+        }
+
+        body {
+            overflow-y: scroll; /* Allow vertical scrolling for entire body */
         }
 
         /* Responsive Design for Android */
@@ -105,13 +112,6 @@
                 font-size: 1rem;
                 padding: 8px 16px;
             }
-        }
-
-        /* Full page scroll */
-        html, body {
-            height: auto;
-            min-height: 100%;
-            overflow: auto; /* Allow full page scroll */
         }
     </style>
 </head>
