@@ -77,7 +77,7 @@
             box-shadow: 0 0 15px #00f7ff, 0 0 30px #00b0ff;
         }
 
-        /* Menu Button */
+        /* Menu Button (😈 Emoji) */
         .menu-btn {
             position: absolute;
             top: 20px;
@@ -89,36 +89,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            font-size: 2.5rem; /* Adjust size for emoji */
+            color: #00f7ff; /* Neon blue color for the emoji */
+            transition: color 0.3s ease-in-out;
         }
 
-        .menu-btn div {
-            width: 35px;
-            height: 5px;
-            background-color: #00f7ff;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .menu-btn div::before,
-        .menu-btn div::after {
-            content: '';
-            width: 35px;
-            height: 5px;
-            background-color: #00f7ff;
-            position: absolute;
-            top: 0;
-            left: 0;
-            border-radius: 5px;
-        }
-
-        .menu-btn div::before {
-            transform: rotate(45deg);
-        }
-
-        .menu-btn div::after {
-            transform: rotate(-45deg);
+        .menu-btn:hover {
+            color: #0099cc; /* Change color on hover */
         }
 
         .menu-panel {
@@ -165,9 +142,8 @@
                 font-size: 1rem;
             }
 
-            .menu-btn div::before,
-            .menu-btn div::after {
-                width: 30px;
+            .menu-btn {
+                font-size: 2rem; /* Smaller emoji on mobile */
             }
 
             .menu-panel {
@@ -178,9 +154,9 @@
     </style>
 </head>
 <body>
-    <!-- Menu Button (X Icon) -->
+    <!-- Menu Button (😈 Emoji) -->
     <div class="menu-btn" onclick="toggleMenu()">
-        <div></div>
+        😈
     </div>
 
     <!-- Menu Panel -->
@@ -204,12 +180,10 @@
             if (menuOpen) {
                 // Close menu
                 menuPanel.style.display = 'none';
-                menuBtn.classList.remove('open');
                 menuOpen = false;
             } else {
                 // Open menu
                 menuPanel.style.display = 'flex';
-                menuBtn.classList.add('open');
                 menuOpen = true;
             }
         }
