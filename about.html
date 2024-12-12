@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About The Mystery</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: url('https://graph.org/file/40e8ced1c225de2eae657-0b11730d0c61b54885.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #00f7ff; /* Neon blue text color */
+            text-align: center;
+            overflow: hidden;
+            background-attachment: fixed; /* Fixed background */
+        }
+
+        /* Overlay for dark effect */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+            z-index: -1;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-family: 'Cinzel', serif; /* Sheriff-style font */
+            color: #00f7ff; /* Neon blue text */
+            text-shadow: 0 0 10px #00f7ff, 0 0 20px #00b0ff, 0 0 30px #0099cc;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #00f7ff;
+            text-shadow: 0 0 10px #00f7ff, 0 0 20px #00b0ff;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            color: #00f7ff;
+            border: 2px solid #00f7ff;
+            border-radius: 5px;
+            background: transparent;
+            text-decoration: none;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-shadow: 0 0 10px #00f7ff, 0 0 20px #00b0ff;
+            margin-bottom: 15px;
+        }
+
+        .btn:hover {
+            background: #00f7ff;
+            color: #1e1e1e;
+            box-shadow: 0 0 15px #00f7ff, 0 0 30px #00b0ff;
+        }
+
+        /* About Content */
+        .about-content {
+            padding: 20px;
+            color: #fff;
+            font-size: 1.1rem;
+            text-align: left;
+            background: rgba(0, 0, 0, 0.8);
+            margin: 20px 0;
+            border-radius: 5px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Go Back Button */
+        .go-back-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: transparent;
+            border: 2px solid #00f7ff;
+            color: #00f7ff;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .go-back-btn:hover {
+            background: #00f7ff;
+            color: #1e1e1e;
+        }
+    </style>
+</head>
+<body>
+    <h1>About The Mystery</h1>
+    
+    <div class="about-content">
+        <h2>Welcome to AARAV</h2>
+        <p>Step into the shadows with AARAV, a space dedicated to uncovering hidden truths and solving the unknown. Join our Telegram community to dive deep into exciting mysteries, and connect with other curious minds. Let's embark on this journey together!</p>
+        <p>My name is [Your Name], and I'm passionate about uncovering the unexplained. Whether it's solving puzzles, discussing the supernatural, or exploring philosophical mysteries, this is the place to be. Together, we’ll discover the mysteries that the world has yet to uncover.</p>
+    </div>
+
+    <!-- Go back button -->
+    <a href="index.html" class="go-back-btn">Go Back to Home</a>
+</body>
+  </html>
